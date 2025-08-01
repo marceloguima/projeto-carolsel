@@ -8,7 +8,9 @@
 :root {
     --cor-principal: #222831;
     --cor-secundaria: #393E46;
-    --cor-texto-principal: #333333;
+        --cor-borda: #393e4636;
+
+    --cor-texto-principal: #181818;
     --branco-puro: #fff;
     --bege-claro:#dfd0b88a;
 }
@@ -89,6 +91,7 @@ form button {
     justify-content: center;
     align-items: center;
     gap: 20px;
+    padding: 20px 0;
     display: none;
 }
 
@@ -129,13 +132,14 @@ li a {
     position: absolute;
     top: 0;
 }
-
+/* 
 .menu {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
     display: flex;
     align-items: center;
-}
+  
+} */
 
 /**********************Fim header*********************** */
 
@@ -193,6 +197,7 @@ li a {
 
 .text-button h2 {
     font-size: 1.1rem;
+   color: var(--cor-texto-principal);
 }
 
 .text-button button {
@@ -252,7 +257,84 @@ h3 {
     width: 15px;
     background: var(--preto-puro);
 }
+/* ****************************Fim do hero************************** */
 
+.produtos-destaques{
+display: flex;
+gap: 10px;
+overflow-x: auto;
+
+}
+
+.card{
+    width: 180px;
+    height: 300px;
+    border: solid 1px var(--cor-borda);
+    border-radius: 5px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 5px;
+}
+
+.card:hover{
+    transform: scale(1.02);
+}
+
+.card img{
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+
+.conteudo-inferior-card{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+    padding: 5px;
+}
+
+
+a.title-card{
+    text-decoration: none;
+    color: var(--cor-texto-principal);
+    font-size: .9rem;
+    font-weight: 600;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   margin-bottom: 15px;
+  
+   
+}
+
+.preco-botao{
+    width: 100%;
+    margin-bottom: 10px;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.preco-botao button{
+    width: 30px;
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+}
+
+.preco-botao button:hover{
+    background:#22283154;
+    border-radius: 5px;
+    
+}
+
+
+.card p{
+    font-size: .8rem;
+    color: var(--cor-principal);
+}
 /* para telas maiores
 
 .next:hover, .prev:hover{
