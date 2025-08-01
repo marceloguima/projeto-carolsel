@@ -7,25 +7,32 @@
 
 :root {
     --cor-principal: #222831;
-    --cor-secundaria: #393E46;
-        --cor-borda: #393e4636;
-
+    --cor-secundaria: #393e46;
+    --cor-borda: #393e4636;
+    --amarelo: #f8b601;
+    --verde:#028008;
     --cor-texto-principal: #181818;
     --branco-puro: #fff;
-    --bege-claro:#dfd0b88a;
+    --bege-claro: #dfd0b88a;
+    --sombra:box-shadow: 5px 5px 10px 0px #232323;
+
 }
 
 body {
     width: 100vw;
     height: 100vh;
-  
+   
+    justify-content: center;
+   
 }
 /* ********************Iníco header************************** */
 header {
     background: var(--cor-principal);
     width: 100%;
-    height: 100px;
+    height: 110px;
     padding: 0 5px;
+    position: fixed;
+    z-index: 1;
 }
 
 nav {
@@ -51,6 +58,7 @@ nav {
 
 form {
     min-width: 245px;
+    max-width: 350px;
     grid-column: 2 / 4;
     grid-row: 2 / 3;
     background: var(--branco-puro);
@@ -62,7 +70,6 @@ form {
 
 form input {
     width: 88%;
-
     padding: 8px;
     border-radius: 10px 0 0 10px;
     border: none;
@@ -85,7 +92,7 @@ form button {
     z-index: 2;
     top: 120px;
     left: 10px;
-    box-shadow: 5px 5px 10px 0px #232323;
+    box-shadow: var(--sombra);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -107,6 +114,8 @@ li a {
 
 .cart-notification {
     grid-column: 3 / 4;
+    display: flex;
+    justify-content: end;
 }
 
 .btn-menu,
@@ -132,8 +141,8 @@ li a {
     position: absolute;
     top: 0;
 }
-/* 
-.menu {
+
+/* .menu {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
     display: flex;
@@ -146,6 +155,7 @@ li a {
 .container {
     width: 100%;
     padding: 8px;
+     padding-top: 100px;
 }
 
 .hero {
@@ -156,19 +166,19 @@ li a {
 }
 
 .galeria {
+  
     width: auto;
-    height: 200px;
+    height: 100%;
     display: flex;
     overflow-y: auto;
     gap: 10px;
-    background:var(--bege-claro);
+    background: var(--bege-claro);
 }
 
 .item {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-    height: 200px;
+    justify-content: end;
+    height: 100%;
     position: absolute;
     left: 2000px;
     transition: ease 1s;
@@ -178,26 +188,32 @@ li a {
     display: flex;
     left: 0;
     opacity: 1;
-   
+    width: 100%;
+    max-width: 1200px;
 }
 
-.saida-do-item{
-    right: 2000px;
-    
+.item img{
+    filter: drop-shadow( 6px  11px  15px  #000000 );
 }
+
 
 .text-button {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 50px;
     width: 40%;
     padding: 0 0 0 5px;
+    position: absolute;
+    left: 10px;
+    top: 40px;
+    
 }
 
 .text-button h2 {
     font-size: 1.1rem;
-   color: var(--cor-texto-principal);
+    width: 100%;
+    color: var(--cor-texto-principal);
+    text-shadow: 1px  5px  10px  #00000073 ;
 }
 
 .text-button button {
@@ -205,12 +221,17 @@ li a {
     color: var(--branco-puro);
     border-radius: 10px;
     width: 100%;
+    max-width: 220px;
     height: 35px;
     border: none;
     box-shadow: 5px 5px 10px 0px #232323;
-} 
+    position: absolute;
+    top: 120px;
+    /* left: 25px; */
+      
+}
 
-.text-button button:hover{
+.text-button button:hover {
     background: var(--cor-principal);
 }
 
@@ -220,7 +241,7 @@ li a {
     background: transparent;
     border: none;
     font-size: 1.1rem;
-    height: 200px;
+    height: 100%;
     color: #2020204d;
 }
 
@@ -259,14 +280,13 @@ h3 {
 }
 /* ****************************Fim do hero************************** */
 
-.produtos-destaques{
-display: flex;
-gap: 10px;
-overflow-x: auto;
-
+.produtos-destaques {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
 }
 
-.card{
+.card {
     width: 180px;
     height: 300px;
     border: solid 1px var(--cor-borda);
@@ -279,16 +299,16 @@ overflow-x: auto;
     padding-bottom: 5px;
 }
 
-.card:hover{
+.card:hover {
     transform: scale(1.02);
 }
 
-.card img{
+.card img {
     width: 100%;
     border-radius: 5px 5px 0 0;
 }
 
-.conteudo-inferior-card{
+.conteudo-inferior-card {
     display: flex;
     flex-direction: column;
     gap: 6px;
@@ -296,47 +316,106 @@ overflow-x: auto;
     padding: 5px;
 }
 
-
-a.title-card{
+a.title-card {
     text-decoration: none;
     color: var(--cor-texto-principal);
-    font-size: .9rem;
+    font-size: 0.9rem;
     font-weight: 600;
-   white-space: nowrap;
-   overflow: hidden;
-   text-overflow: ellipsis;
-   margin-bottom: 15px;
-  
-   
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 15px;
 }
 
-.preco-botao{
+.preco-botao {
     width: 100%;
     margin-bottom: 10px;
     display: inline-flex;
     justify-content: space-between;
 }
 
-.preco-botao button{
+.preco-botao a{
     width: 30px;
     background: transparent;
     border: none;
     font-size: 1.2rem;
-}
-
-.preco-botao button:hover{
-    background:#22283154;
-    border-radius: 5px;
-    
-}
-
-
-.card p{
-    font-size: .8rem;
     color: var(--cor-principal);
 }
-/* para telas maiores
 
-.next:hover, .prev:hover{
-    color: var(--preto-puro);
-} */
+.preco-botao button:hover {
+    background: #22283154;
+    border-radius: 5px;
+}
+
+.card p {
+    font-size: 0.8rem;
+    color: var(--cor-principal);
+}
+
+@media (min-width: 700px){
+    form{
+        grid-row:1 / 2 ;
+        grid-column: 2 / 3;
+    }
+
+    .menu-ul{
+        display: flex !important;
+        flex-direction: row;
+        background: transparent;
+        width: 100%;
+        gap: 0;
+        top: 50px;
+        justify-content: space-around;
+        
+    }
+
+.menu-ul li{
+    width: auto;
+}
+
+    .menu-ul li a{
+        color: var(--branco-puro);
+    }
+
+    .btn-menu{
+        display: none;
+    }
+
+    .hero{
+        height: 400px;
+    }
+
+    .text-button{
+        padding-left: 10%;
+        
+    }
+    
+    .text-button h2{
+        font-size: 2rem;
+       margin-top: 80px;
+
+    }
+
+    
+.text-button button {
+  
+    top: 250px;
+   
+      
+}
+}
+
+@media (min-width: 900px){
+ .hero{
+    height: 500px;
+ }
+
+  
+.text-button button {
+  
+    /* top:380px; */
+   
+      
+}
+}
+

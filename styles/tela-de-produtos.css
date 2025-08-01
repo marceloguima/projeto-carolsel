@@ -1,0 +1,148 @@
+.produto {
+   
+    width: 100%;
+    padding-top: 120px;
+}
+
+.produto_produto {
+    border: solid 1px var(--cor-borda);
+    border-radius: 10px;
+    box-shadow: var(--sombra);
+    display: flex;
+    flex-direction: column;
+}
+
+.produto img {
+    max-width: 600px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.produto h1 {
+    font-size: 1rem;
+}
+
+.descricao-produto {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+}
+
+.avaliacoes {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    font-size: 0.9rem;
+}
+
+.avaliacoes span {
+    color: var(--amarelo);
+}
+
+
+
+.preco {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: var(--cor-principal);
+}
+
+.preco h2 {
+    font-size: 1.3rem;
+}
+
+.frete {
+    color: var(--verde);
+    font-weight: 600;
+}
+
+.escolha-cor {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+.escolha-cor div{
+    border: solid 1px;
+    border-radius: 50px;
+    width: 15px;
+    height: 15px;
+    font-size: .9rem;
+    display: flex;
+    gap: 5px;
+}
+
+.preto{
+background: #000;
+
+}
+
+.amarelo{
+    background: var(--amarelo);
+}
+
+.verde{
+    background: var(--verde);
+}
+
+.vermelho{
+    background:#e90404;
+}
+
+.escolha-tamanho {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+ 
+}
+
+.escolha-tamanho div {
+    border: solid 1px var(--cor-principal);
+    width: 30px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.botoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 120px;
+}
+
+.botoes button {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    background: var(--cor-secundaria);
+    color: var(--branco-puro);
+    font-size: 1rem;
+    margin-top: 20px;
+    border: none;
+    border-radius: 10px;
+}
+
+.botoes button:hover {
+    background: var(--cor-principal);
+}
+
+
+@media (min-width: 650px) {
+    .produto_produto {
+        flex-direction: row;
+        max-width: 900px;
+    }
+
+
+
+    .botoes {
+        margin-top: 60px;
+    }
+
+  
+}
