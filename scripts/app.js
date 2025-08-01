@@ -50,7 +50,7 @@ const trocaItem = (direcao) => {
 clearInterval(timer);
 timer = setInterval(() => {
     trocaItem(1);
-}, 3000);
+}, 8000);
 
 nextBtn.addEventListener("click", () => {
     trocaItem(1);

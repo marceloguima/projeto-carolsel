@@ -6,10 +6,11 @@
 }
 
 :root {
-    --preto-puro: #000;
-    --preto-texto: #333333;
-    --preto-indicador: #00000067;
+    --cor-principal: #222831;
+    --cor-secundaria: #393E46;
+    --cor-texto-principal: #333333;
     --branco-puro: #fff;
+    --bege-claro:#dfd0b88a;
 }
 
 body {
@@ -19,9 +20,10 @@ body {
 }
 /* ********************Iníco header************************** */
 header {
-    background: var(--preto-puro);
+    background: var(--cor-principal);
     width: 100%;
     height: 100px;
+    padding: 0 5px;
 }
 
 nav {
@@ -47,11 +49,13 @@ nav {
 
 form {
     min-width: 245px;
-
     grid-column: 2 / 4;
     grid-row: 2 / 3;
     background: var(--branco-puro);
     border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 form input {
@@ -74,7 +78,7 @@ form button {
     background: var(--branco-puro);
     width: 220px;
     border-radius: 10px;
-    height: 200px;
+    height: auto;
     position: absolute;
     z-index: 2;
     top: 120px;
@@ -94,7 +98,7 @@ li {
 }
 
 li a {
-    color: var(--preto-texto);
+    color: var(--cor-principal);
     text-decoration: none;
 }
 
@@ -153,7 +157,7 @@ li a {
     display: flex;
     overflow-y: auto;
     gap: 10px;
-    background: #e4e4e4;
+    background:var(--bege-claro);
 }
 
 .item {
@@ -192,13 +196,17 @@ li a {
 }
 
 .text-button button {
-    background: var(--preto-puro);
+    background: var(--cor-secundaria);
     color: var(--branco-puro);
     border-radius: 10px;
     width: 100%;
     height: 35px;
     border: none;
     box-shadow: 5px 5px 10px 0px #232323;
+} 
+
+.text-button button:hover{
+    background: var(--cor-principal);
 }
 
 .next,
