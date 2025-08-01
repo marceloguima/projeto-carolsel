@@ -30,7 +30,7 @@
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
                 </form>
-                <ul>
+                <ul class="menu-ul">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Produtos Em Destaque</a></li>
                     <li><a href="#">Promoções</a></li>
@@ -45,33 +45,58 @@
                         <span>3</span>
                     </button>
                 </div>
-                <button class="menu"><i class="fa-solid fa-bars"></i></button>
+                <button class="btn-menu"><i class="fa-solid fa-bars icone-menu"></i></button>
             </nav>
         </header>
         <main class="container">
             <section class="hero">
                 <div class="galeria">
-                    <div class="item">
+                    <div class="item active">
+                        <div class="text-button">
+                            <h2>Terno azul</h2>
+                            <button class="btn-item">Saiba mais</button>
+                        </div>
                         <img
-                            src="./imagens/rapaz.png"
+                            src="./imagens/rapaz-terno.png"
                             alt="imagem de um modelo de terno"
                         />
                     </div>
                     <div class="item">
+                        <div class="text-button">
+                            <h2>blusa slin</h2>
+                            <button class="btn-item">Saiba mais</button>
+                        </div>
                         <img
                             src="./imagens/moca.png"
                             alt="imagem de uma modelo"
                         />
                     </div>
                     <div class="item">
+                        <div class="text-button">
+                            <h2>Camiseta baby look</h2>
+                            <button class="btn-item">Saiba mais</button>
+                        </div>
                         <img
-                            src="./imagens/menino.png"
-                            alt="imagem de um modelo mirim"
+                            src="./imagens/rapaz.png"
+                            alt="imagem de um modelo"
                         />
                     </div>
                 </div>
+                <button class="prev">
+                    <i class="fa-solid fa-angle-left"></i>
+                </button>
+                <button class="next">
+                    <i class="fa-solid fa-angle-right"></i>
+                </button>
+                <div class="posicoes">
+                    <div class="posicao active"></div>
+                    <div class="posicao"></div>
+                    <div class="posicao"></div>
+                </div>
             </section>
             <section class="produtos-destaque"></section>
+
+          
         </main>
 
         <script src="./app.js"></script>

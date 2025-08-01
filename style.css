@@ -7,8 +7,9 @@
 
 :root {
     --preto-puro: #000;
-    --branco-puro: #fff;
     --preto-texto: #333333;
+    --preto-indicador:#00000067;
+    --branco-puro: #fff;
 }
 
 body {
@@ -20,8 +21,6 @@ header {
     background: var(--preto-puro);
     width: 100vw;
     height: 100px;
-
-    
 }
 
 nav {
@@ -46,7 +45,7 @@ nav {
 }
 
 form {
-    width: 245px;
+    min-width: 245px;
     
     grid-column: 2 / 4;
     grid-row: 2 / 3;
@@ -56,7 +55,8 @@ form {
 }
 
 form input{
-    width: 215px;
+    width: 88%;
+  
     padding: 8px;
     border-radius: 10px 0 0 10px;
     border: none;
@@ -71,15 +71,35 @@ form button{
    
 }
 
-ul {
-    display: none;
+.menu-ul{
+   
+    background: var(--branco-puro);
+    width: 220px;
+    border-radius: 10px;
+    height: 200px;
+    position: absolute;
+    z-index: 2;
+    top: 120px;
+    left: 10px;
+    box-shadow: 5px 5px 10px 0px #232323;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+     display: none;
 }
 
+
+
 li {
+   width: 80%;
+   list-style: none;
+
 }
 
 li a {
-    color: var(--branco-puro);
+    color: var(--preto-texto);
     text-decoration: none;
 }
 
@@ -88,7 +108,7 @@ li a {
 }
 
 
-.menu,
+.btn-menu,
 .btn-cart,
 .btn-notification {
     background: transparent;
@@ -121,6 +141,118 @@ li a {
 
 /**********************Fim header*********************** */
 
-img {
-    width: 100px;
+.container{
+    width: 100vw;
+    padding: 8px;
 }
+
+.hero{
+    width: 100%;
+    height:220px;
+    position: relative;
+}
+
+.galeria{
+    width: auto;
+    height: 200px;
+    display: flex;
+    overflow-y: auto;
+    gap: 10px;
+    background: #e4e4e4;
+}
+
+.item{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: end; */
+   
+    width: 100%;
+    height: 200px;
+    display: none;
+}
+
+.item.active{
+    display: flex;
+}
+
+.text-button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    width: 40%;
+    padding: 0  0 0 5px;
+}
+
+.text-button h2{
+    font-size: 1.1rem;
+}
+
+.text-button button{
+    background: var(--preto-puro);
+    color: var(--branco-puro);
+    border-radius: 10px;
+    width: 100%;
+    height: 35px;
+    border: none;
+ 	box-shadow: 5px 5px 10px 0px #232323;
+    
+}
+
+
+
+
+.next, .prev{
+    position: absolute;
+    background: transparent;
+    border: none;
+    font-size: 1.1rem;
+    height: 200px;
+    color: #2020204d;
+}
+
+
+.prev{
+    top: 0;
+}
+
+.next{
+    top: 0;
+    right: 0;
+}
+
+h3{
+    color: #000;
+}
+
+.posicoes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 25px;
+}
+
+
+.posicao{
+    width: 7px;
+    height: 7px;
+    border-radius: 20px;
+    background: var(--preto-indicador);
+}
+
+.posicao.active{
+    width: 15px;
+    background: var(--preto-puro);
+}
+
+
+
+
+
+/* para telas maiores
+
+.next:hover, .prev:hover{
+    color: var(--preto-puro);
+} */
