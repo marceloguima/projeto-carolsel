@@ -8,18 +8,19 @@
 :root {
     --preto-puro: #000;
     --preto-texto: #333333;
-    --preto-indicador:#00000067;
+    --preto-indicador: #00000067;
     --branco-puro: #fff;
 }
 
 body {
     width: 100vw;
     height: 100vh;
+  
 }
 /* ********************Iníco header************************** */
 header {
     background: var(--preto-puro);
-    width: 100vw;
+    width: 100%;
     height: 100px;
 }
 
@@ -32,7 +33,7 @@ nav {
     padding: 3px;
 }
 
-.logo{
+.logo {
     width: 70px;
 }
 
@@ -46,33 +47,30 @@ nav {
 
 form {
     min-width: 245px;
-    
+
     grid-column: 2 / 4;
     grid-row: 2 / 3;
     background: var(--branco-puro);
     border-radius: 10px;
-    
 }
 
-form input{
+form input {
     width: 88%;
-  
+
     padding: 8px;
     border-radius: 10px 0 0 10px;
     border: none;
 }
 
-form button{
+form button {
     background: var(--branco-puro);
     border: none;
     width: 20px;
     height: 20px;
     font-size: 1.1rem;
-   
 }
 
-.menu-ul{
-   
+.menu-ul {
     background: var(--branco-puro);
     width: 220px;
     border-radius: 10px;
@@ -87,15 +85,12 @@ form button{
     justify-content: center;
     align-items: center;
     gap: 20px;
-     display: none;
+    display: none;
 }
 
-
-
 li {
-   width: 80%;
-   list-style: none;
-
+    width: 80%;
+    list-style: none;
 }
 
 li a {
@@ -103,10 +98,9 @@ li a {
     text-decoration: none;
 }
 
-.cart-notification{
- grid-column: 3 / 4;
+.cart-notification {
+    grid-column: 3 / 4;
 }
-
 
 .btn-menu,
 .btn-cart,
@@ -120,39 +114,40 @@ li a {
     justify-items: end;
 }
 
-.btn-cart, .btn-notification{
+.btn-cart,
+.btn-notification {
     position: relative;
 }
 
-.btn-cart span, .btn-notification span{
-    font-size: .9rem;
+.btn-cart span,
+.btn-notification span {
+    font-size: 0.9rem;
     position: absolute;
     top: 0;
 }
 
-
-.menu{
+.menu {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
-   display: flex;
-   align-items: center;
-
+    display: flex;
+    align-items: center;
 }
 
 /**********************Fim header*********************** */
 
-.container{
-    width: 100vw;
+.container {
+    width: 100%;
     padding: 8px;
 }
 
-.hero{
+.hero {
     width: 100%;
-    height:220px;
+    height: 220px;
     position: relative;
+    overflow: hidden;
 }
 
-.galeria{
+.galeria {
     width: auto;
     height: 200px;
     display: flex;
@@ -161,48 +156,53 @@ li a {
     background: #e4e4e4;
 }
 
-.item{
+.item {
     display: flex;
     justify-content: space-between;
-    /* align-items: end; */
-   
     width: 100%;
     height: 200px;
-    display: none;
+    position: absolute;
+    left: 2000px;
+    transition: ease 1s;
 }
 
-.item.active{
+.item.active {
     display: flex;
+    left: 0;
+    opacity: 1;
+   
 }
 
-.text-button{
+.saida-do-item{
+    right: 2000px;
+    
+}
+
+.text-button {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 50px;
     width: 40%;
-    padding: 0  0 0 5px;
+    padding: 0 0 0 5px;
 }
 
-.text-button h2{
+.text-button h2 {
     font-size: 1.1rem;
 }
 
-.text-button button{
+.text-button button {
     background: var(--preto-puro);
     color: var(--branco-puro);
     border-radius: 10px;
     width: 100%;
     height: 35px;
     border: none;
- 	box-shadow: 5px 5px 10px 0px #232323;
-    
+    box-shadow: 5px 5px 10px 0px #232323;
 }
 
-
-
-
-.next, .prev{
+.next,
+.prev {
     position: absolute;
     background: transparent;
     border: none;
@@ -211,21 +211,20 @@ li a {
     color: #2020204d;
 }
 
-
-.prev{
+.prev {
     top: 0;
 }
 
-.next{
+.next {
     top: 0;
     right: 0;
 }
 
-h3{
+h3 {
     color: #000;
 }
 
-.posicoes{
+.posicoes {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -234,22 +233,17 @@ h3{
     height: 25px;
 }
 
-
-.posicao{
+.posicao {
     width: 7px;
     height: 7px;
     border-radius: 20px;
     background: var(--preto-indicador);
 }
 
-.posicao.active{
+.posicao.active {
     width: 15px;
     background: var(--preto-puro);
 }
-
-
-
-
 
 /* para telas maiores
 

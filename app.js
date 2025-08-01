@@ -6,20 +6,18 @@ const btnMenu = document.querySelector(".btn-menu");
 const iconeMenu = document.querySelector(".icone-menu");
 const menu = document.querySelector(".menu-ul");
 
-
 // função para mostar e esconder  o menu
 const trocaIcone = () => {
     if (iconeMenu.classList.contains("fa-bars")) {
         iconeMenu.classList.remove("fa-bars");
         iconeMenu.classList.add("fa-xmark");
         menu.style.display = "flex";
-    }else{
-         iconeMenu.classList.remove("fa-xmark");
+    } else {
+        iconeMenu.classList.remove("fa-xmark");
         iconeMenu.classList.add("fa-bars");
         menu.style.display = "none";
     }
 };
-
 
 btnMenu.addEventListener("click", () => {
     trocaIcone();
