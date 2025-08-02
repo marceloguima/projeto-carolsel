@@ -21,7 +21,7 @@
 body {
     width: 100vw;
     height: 100vh;
-   
+    overflow-x: hidden;
     justify-content: center;
    
 }
@@ -102,15 +102,16 @@ form button {
     display: none;
 }
 
-li {
+.menu-ul li {
     width: 80%;
     list-style: none;
 }
 
-li a {
+.menu-ul li a {
     color: var(--cor-principal);
     text-decoration: none;
 }
+
 
 .cart-notification {
     grid-column: 3 / 4;
@@ -375,7 +376,18 @@ a.title-card {
 
     .menu-ul li a{
         color: var(--branco-puro);
+        padding: 10px 20px;
+        border: transparent;
     }
+
+    .menu-ul li a:hover{
+      
+       border: solid 1px var(--branco-puro);
+       border-radius: 10px;
+     ;
+       
+    }
+
 
     .btn-menu{
         display: none;
@@ -398,11 +410,9 @@ a.title-card {
 
     
 .text-button button {
-  
     top: 250px;
-   
-      
 }
+
 }
 
 @media (min-width: 900px){
