@@ -1,0 +1,83 @@
+
+@media (min-width: 700px){
+
+    /********************* header **********************/
+    form{
+        grid-row:1 / 2 ;
+        grid-column: 2 / 3;
+    }
+
+    .menu-ul{
+        display: flex !important;
+        flex-direction: row;
+        background: transparent;
+        width: 100%;
+        gap: 0;
+        top: 50px;
+        justify-content: space-around;
+        
+    }
+
+.menu-ul li{
+    width: auto;
+}
+
+    .menu-ul li a{
+        color: var(--branco-puro);
+        padding: 10px 20px;
+        border: transparent;
+    }
+
+    .menu-ul li a:hover{
+      
+       border: solid 1px var(--branco-puro);
+       border-radius: 10px;
+     ;
+       
+    }
+
+
+    .btn-menu{
+        display: none;
+    }
+
+    /****************************carolsel*********************  */
+
+    .hero{
+        height: 400px;
+    }
+
+    .text-button{
+        padding-left: 10%;
+        
+    }
+    
+    .text-button h2{
+        font-size: 2rem;
+       margin-top: 80px;
+
+    }
+
+    
+.text-button button {
+    top: 250px;
+}
+
+}
+
+@media (min-width: 900px){
+
+    /* *******************************carolsel******************* */
+ .hero{
+    height: 500px;
+ }
+
+  
+.text-button button {
+  
+    /* top:380px; */
+   
+      
+}
+}
+

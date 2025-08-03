@@ -1,13 +1,13 @@
 const itens = document.querySelectorAll(".item");
 const nextBtn = document.querySelector(".next");
-const prevtBtn = document.querySelector(".prev");
+const prevBtn = document.querySelector(".prev");
 const marcaPosicao = document.querySelectorAll(".posicao");
 const btnMenu = document.querySelector(".btn-menu");
 const iconeMenu = document.querySelector(".icone-menu");
 const menu = document.querySelector(".menu-ul");
 
 // função para mostar e esconder  o menu
-const trocaIcone = () => {
+const mostraMenu = () => {
     if (iconeMenu.classList.contains("fa-bars")) {
         iconeMenu.classList.remove("fa-bars");
         iconeMenu.classList.add("fa-xmark");
@@ -20,7 +20,7 @@ const trocaIcone = () => {
 };
 
 btnMenu.addEventListener("click", () => {
-    trocaIcone();
+    mostraMenu();
 });
 
 // ***********início do carolsel****************
@@ -56,7 +56,7 @@ nextBtn.addEventListener("click", () => {
     trocaItem(1);
 });
 
-prevtBtn.addEventListener("click", () => {
+prevBtn.addEventListener("click", () => {
     trocaItem(-1);
 });
 // **********fim do carolsel*******************
