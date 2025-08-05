@@ -1,0 +1,111 @@
+.secao-carrinho {
+    padding: 120px 5px;
+    max-width: 1200px;
+}
+
+.seus-produtos {
+    height: auto;
+    margin-bottom: 20px;
+        border: solid 1px var(--cor-borda);
+    padding: 5px 20px;
+    
+}
+
+.produto-do-carrinho {
+    border: solid 1px var(--cor-borda);
+    background: var(--bege-claro);
+    height: 80px;
+    display: grid;
+    grid-template-columns: 80px auto;
+    grid-template-rows: auto auto;
+    gap: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 1px 2px 5px #232323;
+    
+}
+
+.produto-do-carrinho img {
+    width: 70px;
+    height: 70px;
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    border-radius: 5px;
+    box-shadow: 1px 2px 5px #232323;
+}
+
+.produto-do-carrinho h3 {
+    font-size: 0.9rem;
+}
+
+.preco-add-produto {
+    grid-column: 2 / 3;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-add-quantidade {
+    display: flex;
+    justify-content: space-around;
+    width: 90px;
+    height: 20px;
+    border: solid 1px var(--cor-borda);
+        background: var(--cor-secundaria);
+
+    border-radius: 10px;
+}
+
+.btn-add-quantidade button {
+    background: var(--cor-secundaria);
+    color: #fff;
+    border: none;
+    width: 30px;
+    border-radius: 10px;
+}
+
+.btn-add-quantidade p{
+    color: var(--branco-puro);
+}
+
+
+/* ***************************Resumo da compra*********************************** */
+
+.resumo-compra{
+    max-width:500px ;
+    border: solid 1px var(--cor-borda);
+    margin-top: 50px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding: 10px;
+}
+
+.linha{
+    width: 100%;
+    height: 1px;
+    background: var(--cor-borda);
+}
+
+.div-frete, .div-desconto, .div-preco{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.resumo-compra button{
+    width: 320px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    color: var(--branco-puro);
+}
+.continuar{
+    background-color: var(--cor-secundaria);
+}
+
+.voltar-compras{
+    background-color: var(--cor-opaca);
+    
+}

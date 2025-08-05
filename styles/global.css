@@ -7,13 +7,14 @@
 
 :root {
     --cor-principal: #222831;
+    --cor-opaca:#222831ad;
     --cor-secundaria: #393e46;
     --cor-borda: #393e4636;
     --amarelo: #f8b601;
     --verde:#028008;
     --cor-texto-principal: #181818;
     --branco-puro: #fff;
-    --bege-claro: #dfd0b88a;
+    --bege-claro: #dfd0b82a;
     --sombra:box-shadow: 5px 5px 10px 0px #232323;
 
 }
@@ -22,7 +23,7 @@ body {
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
-    justify-content: center;
+   
    
 }
 
