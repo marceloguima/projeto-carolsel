@@ -73,11 +73,19 @@
  }
 
   
-.text-button button {
-  
-    /* top:380px; */
+
+.produtos-resumo{
+    gap: 40px;
+    max-width: 1500px;
+    padding: 20px;
+    border-radius: 10px;
+    justify-content: center;
+    flex-direction: row !important;
+    align-items: start !important;
    
-      
+    
+   
 }
+
 }
 
