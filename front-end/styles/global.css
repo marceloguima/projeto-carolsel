@@ -7,16 +7,15 @@
 
 :root {
     --cor-principal: #222831;
-    --cor-opaca:#222831ad;
+    --cor-opaca: #222831ad;
     --cor-secundaria: #393e46;
     --cor-borda: #393e4636;
     --amarelo: #f8b601;
-    --verde:#028008;
+    --verde: #028008;
     --cor-texto-principal: #181818;
     --branco-puro: #fff;
     --bege-claro: #dfd0b82a;
-    --sombra:box-shadow: 5px 5px 10px 0px #232323;
-
+    --sombra: 5px 5px 10px 0px #232323;
 }
 
 body {
@@ -26,8 +25,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-   
-   
 }
 
 header {
@@ -116,11 +113,11 @@ form button {
     text-decoration: none;
 }
 
-
 .cart-notification {
     grid-column: 3 / 4;
     display: flex;
     justify-content: end;
+    margin-top: 15px;
 }
 
 .btn-menu,
@@ -144,5 +141,5 @@ form button {
 .btn-notification span {
     font-size: 0.9rem;
     position: absolute;
-    top: 0;
+    top: -10px;
 }
