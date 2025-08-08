@@ -58,15 +58,16 @@ nav {
 }
 
 form {
-    min-width: 245px;
-    max-width: 350px;
-    grid-column: 2 / 4;
+    width: 300px;
+    height: 34px;
+    grid-column: 1 / -1;
     grid-row: 2 / 3;
     background: var(--branco-puro);
     border-radius: 10px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    margin: 0 auto;
 }
 
 form input {
@@ -74,14 +75,27 @@ form input {
     padding: 8px;
     border-radius: 10px 0 0 10px;
     border: none;
+    outline: none;
 }
 
 form button {
-    background: var(--branco-puro);
-    border: none;
-    width: 20px;
-    height: 20px;
+    background:transparent;
+    border: solid 1px var(--cor-secundaria);
+    border-radius: 10px;
+    width: 35px;
+    height: 30px;
     font-size: 1.1rem;
+    margin-right: 2px;
+    cursor: pointer;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form button:hover{
+    background: var(--cor-principal);
+    color: var(--branco-puro);
 }
 
 .menu-ul {
@@ -135,6 +149,10 @@ form button {
 .btn-cart,
 .btn-notification {
     position: relative;
+}
+
+.btn-menu{
+    padding-bottom: 20px;
 }
 
 .btn-cart span,

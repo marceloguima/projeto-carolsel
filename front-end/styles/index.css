@@ -1,9 +1,7 @@
-
-
 .container {
     width: 100%;
     padding: 8px;
-     padding-top: 100px;
+    padding-top: 100px;
 }
 
 .hero {
@@ -14,7 +12,6 @@
 }
 
 .galeria {
-  
     width: auto;
     height: 100%;
     display: flex;
@@ -27,12 +24,15 @@
     display: flex;
     justify-content: end;
     height: 100%;
- width: 100vw;
+
     position: absolute;
     left: 2000px;
-    transition: ease 1s;
-    background-image: url(../imagens/Gemini_Generated_Image_scvz4gscvz4gscvz.png);
-    background-size: cover;
+    transition: ease-out 1s;
+
+    background: linear-gradient(160deg,rgba(255, 249, 235, 0.45) 0%, rgba(230, 224, 202, 0.73) 100%);
+  
+
+    opacity: 0;
 }
 
 .item.active {
@@ -40,13 +40,14 @@
     left: 0;
     opacity: 1;
     width: 100vw;
-    max-width: 1200px;
 }
 
-.item img{
-    filter: drop-shadow( 6px  11px  15px  #000000 );
+.item img {
+    filter: drop-shadow(6px 11px 15px #000000);
+   
+  
+    object-fit: cover;
 }
-
 
 .text-button {
     display: flex;
@@ -57,14 +58,13 @@
     position: absolute;
     left: 10px;
     top: 40px;
-    
 }
 
 .text-button h2 {
     font-size: 1.1rem;
     width: 100%;
     color: var(--cor-texto-principal);
-    text-shadow: 1px  5px  10px  #00000073 ;
+    text-shadow: 1px 5px 10px #00000073;
 }
 
 .text-button button {
@@ -79,7 +79,6 @@
     position: absolute;
     top: 120px;
     /* left: 25px; */
-      
 }
 
 .text-button button:hover {
@@ -185,7 +184,7 @@ a.title-card {
     justify-content: space-between;
 }
 
-.preco-botao a{
+.preco-botao a {
     width: 30px;
     background: transparent;
     border: none;
